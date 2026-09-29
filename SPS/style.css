@@ -1,0 +1,818 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins',sans-serif;
+}
+body{
+    background-color: #F8FAFC;
+    color: #222;
+}
+.navbar{
+    width: 100%;
+    height: 75px;
+    background-color: #2563EB;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0,0,0,.15);
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+}
+.logo i{
+    font-size: 30px;
+}
+.log h2{
+    font-size: 28px;
+}
+.search-box{
+    width: 250px;
+    background-color: #fff;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    padding: 10px 18px;
+}
+.search-box i{
+    color: #888;
+    margin-right: 10px;
+}
+.search-box input{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+.nav-icons{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.create-post{
+    background-color: #22C553;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+    font-weight: 600;
+}
+.create-post:hover{
+    background-color: #16a34a;
+    transform: scale(1.05);
+}
+.nav-icons i{
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s;
+}
+.nav-icons i:hover{
+    transform: scale(1.15);
+}
+.profile-img{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+    border: 3px solid #fff;
+}
+.container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 260px 1fr 300px;
+    gap: 25px;
+    padding: 100px 30px 30px;
+}
+.sidebar{
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    position: sticky;
+    height: fit-content;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+.profile-card{
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+.profile-card img{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+.profile-card h3{
+    font-size: 22px;
+    color: #2563EB;
+}
+.profile-card p{
+    color: #777;
+    margin-top: 5px;
+}
+
+.xp-box{
+    margin-top: 20px;
+    background-color: #2563EB;
+    color: #fff;
+    border-radius: 15px;
+}
+.xp-box h4{
+    margin-bottom: 5px;
+}
+.menu{
+    list-style: none;
+    margin-top: 25px;
+}
+.menu li{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: .3s;
+    margin-bottom: 8px;
+}
+.menu li i{
+    font-size: 25px;
+    color: #2563EB;
+}
+.menu li span{
+    font-size: 16px;
+    font-weight: 500;
+}
+.menu li:hover{
+    background-color: #2563EB;
+    color: #fff;
+    transform: translateX(5px);
+}
+.menu li:hover i{
+    color: #fff;
+}
+.menu li:hover a{
+    color: #fff;
+}
+.menu a:hover{
+    background-color: #2563EB;
+    color: #fff;
+    transform: translateX(5px);
+}
+.feed{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+/* ==========================================
+   CampusVerse - style.css (Part 2)
+   Feed, Stories, Feed Cards & Feature Cards
+==========================================*/
+
+/* ================= POST BOX ================= */
+
+.post-box{
+    background:#fff;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.post-top{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.post-top img{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.post-top input{
+    flex:1;
+    border:none;
+    outline:none;
+    background:#f1f5f9;
+    padding:14px 18px;
+    border-radius:30px;
+    font-size:15px;
+}
+
+.post-options{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+}
+
+.post-options button{
+    border:none;
+    background:#2563EB;
+    color:#fff;
+    padding:12px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+    font-weight:500;
+}
+
+.post-options button:hover{
+    background:#1d4ed8;
+    transform:translateY(-2px);
+}
+
+/* ================= STORIES ================= */
+
+.stories{
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
+    padding:10px 0;
+}
+
+.stories::-webkit-scrollbar{
+    display:none;
+}
+
+.story{
+    min-width:110px;
+    height:160px;
+    background:#fff;
+    border-radius:18px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    cursor:pointer;
+    transition:.3s;
+}
+
+.story:hover{
+    transform:translateY(-6px);
+}
+
+.story img{
+    width:70px;
+    height:70px;
+    border-radius:50%;
+    object-fit:cover;
+    margin-bottom:10px;
+}
+
+.story i{
+    font-size:32px;
+    color:#2563EB;
+    margin-bottom:10px;
+}
+
+.story p{
+    font-weight:600;
+}
+
+/* ================= FEED CARD ================= */
+
+.feed-card{
+    background:#fff;
+    border-radius:20px;
+    padding:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.feed-card:hover{
+    transform:translateY(-5px);
+}
+
+.feed-header{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:15px;
+}
+
+.feed-header .profile{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.feed-header h3{
+    color:#2563EB;
+}
+
+.feed-header p{
+    color:#777;
+    font-size:14px;
+}
+
+.feed-content p{
+    margin-bottom:15px;
+    line-height:1.7;
+}
+
+.post-image{
+    width:100%;
+    border-radius:15px;
+    object-fit:cover;
+    margin-bottom:15px;
+}
+
+.feed-footer{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.feed-footer button{
+    border:none;
+    background:#f1f5f9;
+    padding:10px 15px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.feed-footer button:hover{
+    background:#2563EB;
+    color:#fff;
+}
+
+/* ================= CODING CHALLENGE ================= */
+
+.challenge-card{
+    background:linear-gradient(135deg,#2563EB,#06B6D4);
+    color:#fff;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.challenge-card h2{
+    margin-bottom:15px;
+}
+
+.challenge-card p{
+    margin-bottom:20px;
+}
+
+.challenge-btn{
+    background:#fff;
+    color:#2563EB;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+.challenge-btn:hover{
+    transform:scale(1.05);
+}
+
+/* ================= EVENT CARD ================= */
+
+.event-card{
+    background:#fff;
+    border-left:6px solid #F59E0B;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.event-card h2{
+    margin-bottom:12px;
+}
+
+.event-card p{
+    margin-bottom:20px;
+}
+
+.register-btn{
+    background:#F59E0B;
+    color:#fff;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.register-btn:hover{
+    background:#d97706;
+}
+
+/* ================= ACHIEVEMENT ================= */
+
+.achievement-card{
+    background:#22C55E;
+    color:#fff;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+.achievement-card h2{
+    margin-bottom:15px;
+}
+
+.achievement-card p{
+    margin-bottom:20px;
+}
+
+.achievement-card button{
+    background:#fff;
+    color:#22C55E;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.achievement-card button:hover{
+    transform:scale(1.05);
+}
+
+/* ================= STUDENT REELS ================= */
+
+.reels-section{
+    background:#fff;
+    padding:20px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.reels-section h2{
+    margin-bottom:20px;
+}
+
+.reels-container{
+    display:flex;
+    gap:15px;
+    overflow-x:auto;
+}
+
+.reels-container::-webkit-scrollbar{
+    display:none;
+}
+
+.reel{
+    min-width:170px;
+    background:#f8fafc;
+    border-radius:15px;
+    overflow:hidden;
+    transition:.3s;
+}
+
+.reel:hover{
+    transform:scale(1.04);
+}
+
+.reel img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.reel p{
+    padding:12px;
+    text-align:center;
+    font-weight:600;
+}
+/* ==========================================
+   CampusVerse - style.css (Part 3)
+   Right Sidebar, Footer, Mobile & Responsive
+==========================================*/
+
+/* ================= RIGHT SIDEBAR ================= */
+
+.right-sidebar{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    position:sticky;
+    top:95px;
+    height:fit-content;
+}
+
+.card{
+    background:#fff;
+    padding:20px;
+    border-radius:18px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.card h3{
+    color:#2563EB;
+    margin-bottom:15px;
+}
+
+.trending-list{
+    list-style:none;
+}
+
+.trending-list li{
+    padding:10px 0;
+    border-bottom:1px solid #eee;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.trending-list li:hover{
+    color:#2563EB;
+    padding-left:8px;
+}
+
+.friend{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:15px;
+}
+
+.friend img{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.friend div{
+    flex:1;
+    margin-left:10px;
+}
+
+.friend h4{
+    font-size:15px;
+}
+
+.friend small{
+    color:#777;
+}
+
+.friend button{
+    background:#2563EB;
+    color:#fff;
+    border:none;
+    padding:8px 15px;
+    border-radius:20px;
+    cursor:pointer;
+}
+
+.friend button:hover{
+    background:#1d4ed8;
+}
+
+.goals{
+    list-style:none;
+}
+
+.goals li{
+    padding:10px 0;
+    border-bottom:1px solid #eee;
+}
+
+/* ================= AI BUTTON ================= */
+
+.ai-chat{
+    position:fixed;
+    bottom:90px;
+    right:25px;
+    z-index:999;
+}
+
+.ai-chat button{
+    background:#06B6D4;
+    color:#fff;
+    border:none;
+    padding:15px 22px;
+    border-radius:40px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:600;
+    box-shadow:0 10px 20px rgba(0,0,0,.2);
+    transition:.3s;
+}
+
+.ai-chat button:hover{
+    transform:scale(1.08);
+}
+
+/* ================= MOBILE NAVIGATION ================= */
+
+.mobile-nav{
+    display:none;
+}
+
+.mobile-nav a{
+    text-decoration:none;
+    color:#444;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    font-size:13px;
+}
+
+.mobile-nav i{
+    font-size:20px;
+    margin-bottom:4px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:#2563EB;
+    color:#fff;
+    margin-top:30px;
+}
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#2563EB;
+    border-radius:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#e5e7eb;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1024px){
+
+.container{
+    grid-template-columns:220px 1fr;
+}
+
+.right-sidebar{
+    display:none;
+}
+
+}
+
+@media(max-width:768px){
+
+.navbar{
+    padding:0 15px;
+}
+
+.logo h2{
+    font-size:20px;
+}
+
+.search-box{
+    display:none;
+}
+
+.create-post{
+    display:none;
+}
+
+.container{
+    grid-template-columns:1fr;
+    padding:90px 15px 90px;
+}
+
+.sidebar{
+    display:none;
+}
+
+.mobile-nav{
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:65px;
+    background:#fff;
+    box-shadow:0 -5px 15px rgba(0,0,0,.1);
+    z-index:1000;
+}
+
+.feed-footer{
+    flex-direction:column;
+}
+
+.post-options{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.story{
+    min-width:95px;
+    height:145px;
+}
+
+.ai-chat{
+    bottom:80px;
+    right:15px;
+}
+
+}
+
+@media(max-width:480px){
+
+.post-options{
+    grid-template-columns:1fr;
+}
+
+.challenge-card,
+.event-card,
+.achievement-card{
+    padding:18px;
+}
+
+.feed-card{
+    padding:15px;
+}
+
+.feed-header h3{
+    font-size:16px;
+}
+
+.feed-header p{
+    font-size:12px;
+}
+
+}
+
+/* ================= SIMPLE ANIMATIONS ================= */
+
+.feed-card,
+.story,
+.card,
+.challenge-card,
+.event-card,
+.achievement-card{
+    transition:all .3s ease;
+}
+
+.feed-card:hover,
+.card:hover,
+.story:hover{
+    transform:translateY(-5px);
+    box-shadow:0 12px 25px rgba(0,0,0,.12);
+}
+
+/* ================= DARK MODE SUPPORT ================= */
+
+body.dark{
+    background:#111827;
+    color:#fff;
+}
+
+body.dark .sidebar,
+body.dark .feed-card,
+body.dark .card,
+body.dark .post-box,
+body.dark .reels-section,
+body.dark .event-card{
+    background:#1F2937;
+    color:#fff;
+}
+
+body.dark .post-top input{
+    background:#374151;
+    color:#fff;
+}
+
+body.dark .mobile-nav{
+    background:#1F2937;
+}
+
+body.dark footer{
+    background:#111827;
+}

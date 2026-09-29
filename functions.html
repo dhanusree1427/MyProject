@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions</title>
+  </head>
+  <body>
+    <h2>Open console to view output</h2>
+    <script>
+      function greet() {
+        return "Hello from function declaration!";
+      }
+      const welcome = function () {
+        return "Hello from function expression";
+      };
+      const arrowGreet = () => {
+        return "Hello from arrow function!";
+      };
+      console.log(greet());
+      console.log(welcome());
+      console.log(arrowGreet());
+    </script>
+  </body>
+</html>

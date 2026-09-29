@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listener</title>
+</head>
+<body>
+    <h2>Event Listener Demo</h2>
+    <button id="btn">Click me</button>
+    <p id="message">Move the mouse over this text.</p>
+    <script>
+        const button = document.getElementById("btn");
+        const message = document.getElementById("message");
+        button.addEventListener("click",function(){
+            alert("Button Clicked");
+        });
+        button.addEventListener("dbclick",function(){
+            console.log("Button Double Clicked");
+        });
+        message.addEventListener("mouseover", function(){
+            message.innerHTML = "Mouse Over Event Triggered";
+        });
+        message.addEventListener("mouseout", function(){
+            message.innerHTML = "Mouse left the paragraph";
+        });
+    </script>
+</body>
+</html>

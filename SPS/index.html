@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>CampusVerse - Student Social Platform</title>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <h2>CampusVerse</h2>
+        </div>
+        <div class="search-box">
+            <i class="fa-solid fa-search"></i>
+            <input type="text" placeholder="Search Students, Projects, Notes....">
+        </div>
+        <div class="nav-icons">
+            <button class="create-post">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+             <i class="fa-regular fa-bell"></i>
+            <i class="fa-regular fa-message"></i>
+            <img src="" alt="">
+        </div>
+    </header>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="profile-card">
+                <img src="Dhanu.jpg" alt="">
+                <h3>J Dhanusree</h3>
+                <p>CSE-AI Student</p>
+                <div class="xp-box">
+                    <h4>XP</h4>
+                    <span>1250 XP</span>
+                </div>
+            </div>
+            <ul class="menu">
+                <li>
+                    <i class="fa-solid fa-house"></i>
+                    <a href="index.html"><span>Home</span></a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-user"></i>
+                    <a href="profile.html"><span>My Profile</span></a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-users"></i>
+                    <a href="studygroups.html"><span>Study Groups</span></a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-code"></i>
+                    <a href=""><span>Coding Area</span></a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-rocket"></i>
+                    <a href=""><span>Projects</span></a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-folder-open"></i>
+                    <a href=""><span>Notes</span></a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-trophy"></i>  
+                    <a href=""><span>Hackthons</span></a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-briefcase"></i>
+                    <a href=""><span>internships</span></a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-ranking-star"></i>
+                    <a href=""><span>Leaderboard</span></a>
+                </li>
+                <li>
+                    <i class="fa-solid fa-gear"></i>
+                    <a href=""><span>Settings</span></a>
+                </li>
+            </ul>
+        </aside>
+        <main class="feed">
+            <div class="post-box">
+                <div class="post-top">
+                    <img src="Dhanu.jpg" alt="">
+                    <input type="text" placeholder="What's on your mind?">
+                </div>
+                <div class="post-options">
+                    <button>
+                        <i class="fa-solid fa-image"></i>
+                        Image
+                    </button>
+                    <button>
+                        <i class="fa-solid fa-video"></i>
+                        video
+                    </button>
+                    <button>
+                        <i class="fa-solid fa-file-pdf"></i>
+                        PDF
+                    </button>
+                    <button>
+                        <i class="fa-solid fa-chart-simple"></i>
+                        Poll
+                    </button>
+                    <button>
+                        <i class="fa-solid fa-circle-question"></i>
+                        Ask Doubt
+                    </button>
+                    <button>
+                        <i class="fa-solid fa-share"></i>
+                        Project
+                    </button>
+                </div>
+            </div>
+            <div class="stories">
+                <div class="story">
+                    <i class="fa-solid fa-plus"></i>
+                    <p>Create Story</p>
+                </div>
+                <div class="story">
+                    <img src="Rahul.jpg" alt="">
+                    <p>Rahul</p>
+                </div>
+                <div class="story">
+                    <img src="Priya.jpg" alt="">
+                    <p>Priya</p>
+                </div>
+                <div class="story">
+                    <img src="Arjun.jpg" alt="">
+                    <p>Arjun</p>
+                </div>
+                <div class="story">
+                    <img src="Anjali.jpg" alt="">
+                    <p>Anjali</p>
+                </div>
+            </div>
+            <div class="feed-card">
+                <div class="feed-header">
+                    <img src="Dhanu.jpg" alt="" class="profile">
+                    <div>
+                        <h3>Dhanusree</h3>
+                        <p>CSE-AI  .  2hours ago</p>
+                    </div>
+                </div>
+                <div class="feed-content">
+                    <p>Built an AI Attendance System using Face Recognition. Successfully completed the project with Python, OpenCV, and Flask. Feedback is welcome!</p>
+                    <img src="" alt="" class="post-image">
+                </div>
+                <div class="feed-footer">
+                    <button>
+                        <i class="fa-regular fa-heart"></i>  
+                        120 Likes
+                    </button>
+                    <button>
+                        <i class="fa-regular fa-comment"></i>
+                        38 Comments
+                    </button>
+                    <button>
+                        <i class="fa-solid fa-share"></i>
+                        Share
+                    </button>
+                    <button>
+                        <i class="fa-regular fa-bookmark"></i>
+                        Save
+                    </button>
+                </div>
+            </div>
+            <div class="challenge-card">
+                <h2>🏆 Weekly Coding Challenge</h2>
+                <p>Solve today's DSA challenge and earn <strong>250 XP</strong></p>
+                <button class="challenge-btn">
+                    Start Challenge
+                </button>
+            </div>
+            <div class="event-card">
+                <h2>Upcoming Hackthon</h2>
+                <p>National Level Hackthon starts in <strong>2 days</strong></p>
+                <button class="register-btn">Register Now</button>
+            </div>
+            <div class="feed-card">
+                <div class="feed-header">
+                    <img src="Rahul.jpg" alt="" class="profile">
+                    <div>
+                        <h3>Rahul</h3>
+                        <p>ECE  .  Yeaterday</p>
+                    </div>
+                </div>
+                <div class="feed-content">
+                    <p>Uploaded Digital Electronics Notes for 2nd Year Students. Download and share with your friends.</p>
+                    <img src="" alt="" class="post-image">
+                </div>
+                <div class="feed-footer">
+                    <button>
+                        <i class="fa-regular fa-heart"></i>   
+                        86 Likes
+                    </button>
+                    <button>
+                        <i class="fa-regular fa-comment"></i>
+                        19 Comments
+                    </button>
+                    <button>
+                        <i class="fa-solid fa-share"></i>
+                        Share
+                    </button>
+                    <button>
+                        <i class="fa-regular fa-bookmark"></i>
+                        Save
+                    </button>
+                </div>
+            </div>
+            <div class="achievement-card">
+                <h2>Achievement Unlocked</h2>
+                <p>Congratulations! You completed your <strong>7-Day Login Streak.</strong></p>
+                <button>Claim Badge</button>
+            </div>
+            <div class="reels-section">
+                <h2>Student Reels</h2>
+                <div class="reels-container">
+                    <div class="reel">
+                        <img src="" alt="">
+                        <p>Python Tips</p>
+                    </div>
+                    <div class="reel">
+                        <img src="" alt="">
+                        <p>Web Dev</p>
+                    </div>
+                    <div class="reel">
+                        <img src="" alt="">
+                        <p>AI Projects</p>
+                    </div>
+                    <div class="reel">
+                        <img src="" alt="">
+                        <p>Placements</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <aside class="right-sidebar">
+            <div class="card">
+                <h3>Trending Topics</h3>
+                <ul class="trending-list">
+                    <li>#AI</li>
+                    <li>#WebDevelopment</li>
+                    <li>#Python</li>
+                    <li>#PlacementPre</li>
+                    <li>#Hackthon</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Suggested Friends</h3>
+                <div class="friend">
+                    <img src="Rahul.jpg" alt="">
+                    <div>
+                        <h4>Rahul</h4>
+                        <small>CSE</small>
+                    </div>
+                    <button>Follow</button>
+                </div>
+                <div class="friend">
+                    <img src="Priya.jpg" alt="">
+                    <div>
+                        <h4>Priya</h4>
+                        <small>ECE</small>
+                    </div>
+                    <button>Follow</button>
+                </div>
+                <div class="friend">
+                    <img src="Arjun.jpg" alt="">
+                    <div>
+                        <h4>Arjun</h4>
+                        <small>CSE-AI</small>
+                    </div>
+                    <button>Follow</button>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Daily Goals</h3>
+                <ul class="goals">
+                    <li>Complete 1 Coding Challenge</li>
+                    <li>Upload Notes</li>
+                    <li>Help 2 Students</li>
+                    <li>Maintain Login Streak</li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+    <div class="ai-chat">
+        <button>AI Mentor</button>
+    </div>
+    <nav class="mobile-nav">
+        <a href="#">
+            <i class="fa-solid fa-house"></i>
+            <span>Home</span>
+        </a>
+        <a href="#">
+             <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Search</span>
+        </a>
+        <a href="#">
+            <i class="fa-solid fa-plus"></i>
+            <span>Post</span>
+        </a>
+        <a href="#">
+            <i class="fa-solid fa-comments"></i>
+            <span>Chat</span>
+        </a>
+        <a href="#">
+            <i class="fa-solid fa-user"></i>
+            <span>Profile</span>
+        </a>
+    </nav>
+    <footer>
+        <p>
+            © 2026 CampusVerse |
+            Learn • Connect • Build • Grow
+        </p>
+    </footer>
+</body>
+</html>
