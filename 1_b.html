@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Selectors</title>
+</head>
+<body>
+    <h1 id="heading">Welcome to JavaScript</h1>
+    <p class="text">Paragraph 1</p>
+    <p class="text">Paragraph 2</p>
+    <h3>HTML DOM Selectors</h3>
+    <button>Click me</button>
+    <script>
+        let heading = document.getElementById("heading");
+        console.log("ID Selectors: "+ heading.innerHTML);
+        let paragraphs = document.getElementsByClassName("text");
+        console.log("Class Selector: "+ paragraphs[0].innerHTML);
+        let buttons = document.getElementsByTagName("button");
+        console.log("Tag Selector: "+ buttons[0].innerHTML);
+        let firstparagraph = document.querySelector(".text");
+        console.log("querySelector: "+ firstparagraph.innerHTML);
+        let allParagraphs = document.querySelectorAll(".text");
+        allParagraphs.forEach(function(item, index){
+            console.log("querySelectoeAll: Paragraph"+(index+1)+ ":" + item.innerHTML);
+        });
+    </script>
+</body>
+</html>

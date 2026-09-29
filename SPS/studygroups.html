@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusVerse</title>
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="study.css">
+</head>
+
+<body>
+
+<div class="app">
+
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            CampusVerse
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <a href="#" class="nav-link active" data-page="home">
+                <i class="fa-solid fa-house"></i>
+                <span>Home</span>
+            </a>
+
+            <a href="#" class="nav-link" data-page="groups">
+                <i class="fa-solid fa-users"></i>
+                <span>Study Groups</span>
+            </a>
+
+            <a href="#" class="nav-link" data-page="courses">
+                <i class="fa-solid fa-book"></i>
+                <span>Courses</span>
+            </a>
+
+            <a href="#" class="nav-link" data-page="calendar">
+                <i class="fa-solid fa-calendar-days"></i>
+                <span>Calendar</span>
+            </a>
+
+            <a href="#" class="nav-link" data-page="streak">
+                <i class="fa-solid fa-fire"></i>
+                <span>Streak</span>
+            </a>
+
+            <a href="#" class="nav-link" data-page="messages">
+                <i class="fa-solid fa-message"></i>
+                <span>Messages</span>
+            </a>
+
+            <a href="#" class="nav-link" data-page="settings">
+                <i class="fa-solid fa-gear"></i>
+                <span>Settings</span>
+            </a>
+
+            <a href="#" class="nav-link logout-link" id="logoutBtn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <span>Logout</span>
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <main class="main">
+
+        <header class="topbar">
+
+            <div class="search-container" id="globalSearch">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search Study Groups..."
+                >
+
+            </div>
+
+            <div class="top-icons">
+
+                <button class="icon-button" onclick="showNotification()">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="notification-dot"></span>
+                </button>
+
+                <button class="icon-button" onclick="openMessages()">
+                    <i class="fa-solid fa-envelope"></i>
+                </button>
+
+                <button class="profile-button" onclick="showPage('settings')">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+
+            </div>
+
+        </header>
+
+        <div id="content">
+            <section class="page" id="homePage">
+
+                <div class="welcome-section">
+
+                    <div>
+                        <h1>Welcome to CampusVerse 👋</h1>
+
+                        <p>
+                            Learn, collaborate and grow together with your campus community.
+                        </p>
+                    </div>
+
+                    <button class="primary-button"
+                            onclick="showPage('groups')">
+                        Explore Study Groups
+                    </button>
+
+                </div>
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon blue">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+
+                        <div>
+                            <h3 id="homeJoinedCount">0</h3>
+                            <p>Joined Groups</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon green">
+                            <i class="fa-solid fa-book"></i>
+                        </div>
+
+                        <div>
+                            <h3>6</h3>
+                            <p>Courses</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon orange">
+                            <i class="fa-solid fa-fire"></i>
+                        </div>
+
+                        <div>
+                            <h3>31</h3>
+                            <p>Day Streak</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon purple">
+                            <i class="fa-solid fa-calendar"></i>
+                        </div>
+
+                        <div>
+                            <h3 id="eventCount">0</h3>
+                            <p>Upcoming Events</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="home-grid">
+
+                    <div class="dashboard-card">
+
+                        <div class="card-heading">
+
+                            <h2>Continue Learning</h2>
+
+                            <button onclick="showPage('courses')">
+                                View All
+                            </button>
+
+                        </div>
+
+                        <div class="learning-item">
+
+                            <div class="learning-icon">
+                                <i class="fa-brands fa-python"></i>
+                            </div>
+
+                            <div class="learning-info">
+
+                                <h3>Python Programming</h3>
+
+                                <div class="progress">
+                                    <div class="progress-bar"
+                                         style="width:65%">
+                                    </div>
+                                </div>
+
+                                <small>65% completed</small>
+
+                            </div>
+
+                            <button class="small-button">
+                                Continue
+                            </button>
+
+                        </div>
+
+
+                        <div class="learning-item">
+
+                            <div class="learning-icon">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+
+                            <div class="learning-info">
+
+                                <h3>AI & Machine Learning</h3>
+
+                                <div class="progress">
+                                    <div class="progress-bar"
+                                         style="width:42%">
+                                    </div>
+                                </div>
+
+                                <small>42% completed</small>
+
+                            </div>
+
+                            <button class="small-button">
+                                Continue
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="dashboard-card">
+
+                        <div class="card-heading">
+
+                            <h2>Upcoming Events</h2>
+
+                            <button onclick="showPage('calendar')">
+                                Calendar
+                            </button>
+
+                        </div>
+
+                        <div id="homeEvents"></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+          <!-- STUDY GROUPS -->
+         <section class="page hidden" id="groupsPage">
+
+                <div class="page-header">
+
+                    <div>
+                        <h1>Study Groups</h1>
+
+                        <p>
+                            Learn together, grow together.
+                        </p>
+                    </div>
+
+                    <button class="primary-button"
+                            onclick="openCreateGroup()">
+                        <i class="fa-solid fa-plus"></i>
+                        Create Group
+                    </button>
+
+                </div>
+
+
+                <div class="tabs">
+
+                    <button
+                        class="tab active-tab"
+                        id="allTab"
+                        onclick="changeGroupTab('all')">
+                        All Groups
+                    </button>
+
+                    <button
+                        class="tab"
+                        id="myTab"
+                        onclick="changeGroupTab('my')">
+                        My Groups
+                    </button>
+
+                    <button
+                        class="tab"
+                        id="joinedTab"
+                        onclick="changeGroupTab('joined')">
+                        Joined
+                        <span class="count"
+                              id="joinedCount">
+                            0
+                        </span>
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="groups-container"
+                    id="groupsContainer">
+                </div>
+
+            </section>
+
+            <section class="page hidden" id="coursesPage">
+
+                <div class="page-header">
+
+                    <div>
+                        <h1>My Courses</h1>
+
+                        <p>
+                            Continue your learning journey.
+                        </p>
+                    </div>
+
+                    <button class="primary-button">
+                        <i class="fa-solid fa-plus"></i>
+                        Browse Courses
+                    </button>
+
+                </div>
+
+
+                <div class="course-grid">
+
+
+                    <div class="course-card">
+
+                        <div class="course-top blue-bg">
+                            <i class="fa-brands fa-html5"></i>
+                        </div>
+
+                        <div class="course-body">
+
+                            <span class="course-category">
+                                Web Development
+                            </span>
+
+                            <h2>Frontend Development</h2>
+
+                            <p>
+                                HTML, CSS, JavaScript and React
+                            </p>
+
+                            <div class="course-info">
+                                <span>
+                                    <i class="fa-solid fa-book"></i>
+                                    24 Lessons
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-clock"></i>
+                                    12 Hours
+                                </span>
+                            </div>
+
+                            <div class="progress">
+                                <div class="progress-bar"
+                                     style="width:70%">
+                                </div>
+                            </div>
+
+                            <div class="course-bottom">
+                                <span>70% Complete</span>
+
+                                <button class="small-button">
+                                    Continue
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="course-card">
+
+                        <div class="course-top green-bg">
+                            <i class="fa-brands fa-python"></i>
+                        </div>
+
+                        <div class="course-body">
+
+                            <span class="course-category">
+                                Programming
+                            </span>
+
+                            <h2>Python Programming</h2>
+
+                            <p>
+                                Python Basics, OOP and Projects
+                            </p>
+
+                            <div class="course-info">
+                                <span>
+                                    <i class="fa-solid fa-book"></i>
+                                    30 Lessons
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-clock"></i>
+                                    15 Hours
+                                </span>
+                            </div>
+
+                            <div class="progress">
+                                <div class="progress-bar"
+                                     style="width:55%">
+                                </div>
+                            </div>
+
+                            <div class="course-bottom">
+                                <span>55% Complete</span>
+
+                                <button class="small-button">
+                                    Continue
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="course-card">
+
+                        <div class="course-top purple-bg">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+
+                        <div class="course-body">
+
+                            <span class="course-category">
+                                Artificial Intelligence
+                            </span>
+
+                            <h2>AI & Machine Learning</h2>
+
+                            <p>
+                                ML algorithms and AI fundamentals
+                            </p>
+
+                            <div class="course-info">
+                                <span>
+                                    <i class="fa-solid fa-book"></i>
+                                    35 Lessons
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-clock"></i>
+                                    20 Hours
+                                </span>
+                            </div>
+
+                            <div class="progress">
+                                <div class="progress-bar"
+                                     style="width:42%">
+                                </div>
+                            </div>
+
+                            <div class="course-bottom">
+                                <span>42% Complete</span>
+
+                                <button class="small-button">
+                                    Continue
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="course-card">
+
+                        <div class="course-top orange-bg">
+                            <i class="fa-brands fa-java"></i>
+                        </div>
+
+                        <div class="course-body">
+
+                            <span class="course-category">
+                                Programming
+                            </span>
+
+                            <h2>Java Programming</h2>
+
+                            <p>
+                                Core Java and Object Oriented Programming
+                            </p>
+
+                            <div class="course-info">
+                                <span>
+                                    <i class="fa-solid fa-book"></i>
+                                    28 Lessons
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-clock"></i>
+                                    16 Hours
+                                </span>
+                            </div>
+
+                            <div class="progress">
+                                <div class="progress-bar"
+                                     style="width:30%">
+                                </div>
+                            </div>
+
+                            <div class="course-bottom">
+                                <span>30% Complete</span>
+
+                                <button class="small-button">
+                                    Continue
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="course-card">
+
+                        <div class="course-top red-bg">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+
+                        <div class="course-body">
+
+                            <span class="course-category">
+                                Computer Science
+                            </span>
+
+                            <h2>Data Structures</h2>
+
+                            <p>
+                                Arrays, Trees, Graphs and Algorithms
+                            </p>
+
+                            <div class="course-info">
+                                <span>
+                                    <i class="fa-solid fa-book"></i>
+                                    32 Lessons
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-clock"></i>
+                                    18 Hours
+                                </span>
+                            </div>
+
+                            <div class="progress">
+                                <div class="progress-bar"
+                                     style="width:25%">
+                                </div>
+                            </div>
+
+                            <div class="course-bottom">
+                                <span>25% Complete</span>
+
+                                <button class="small-button">
+                                    Continue
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="course-card">
+
+                        <div class="course-top dark-bg">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+
+                        <div class="course-body">
+
+                            <span class="course-category">
+                                Competitive Exams
+                            </span>
+
+                            <h2>CAT Preparation</h2>
+
+                            <p>
+                                Quantitative Aptitude, LRDI and VARC
+                            </p>
+
+                            <div class="course-info">
+                                <span>
+                                    <i class="fa-solid fa-book"></i>
+                                    40 Lessons
+                                </span>
+
+                                <span>
+                                    <i class="fa-solid fa-clock"></i>
+                                    25 Hours
+                                </span>
+                            </div>
+
+                            <div class="progress">
+                                <div class="progress-bar"
+                                     style="width:60%">
+                                </div>
+                            </div>
+
+                            <div class="course-bottom">
+                                <span>60% Complete</span>
+
+                                <button class="small-button">
+                                    Continue
+                                </button>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+          <!-- CALENDAR -->
+            
+            <section class="page hidden" id="calendarPage">
+
+                <div class="page-header">
+
+                    <div>
+                        <h1>Calendar</h1>
+
+                        <p>
+                            Manage your classes, meetings and study sessions.
+                        </p>
+                    </div>
+
+                    <button class="primary-button"
+                            onclick="openEventModal()">
+                        <i class="fa-solid fa-plus"></i>
+                        Add Event
+                    </button>
+
+                </div>
+
+
+                <div class="calendar-layout">
+
+                    <div class="calendar-card">
+
+                        <div class="calendar-header">
+
+                            <button onclick="changeMonth(-1)">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <h2 id="calendarMonth">
+                                August 2026
+                            </h2>
+
+                            <button onclick="changeMonth(1)">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                        </div>
+
+                        <div class="weekdays">
+
+                            <span>Sun</span>
+                            <span>Mon</span>
+                            <span>Tue</span>
+                            <span>Wed</span>
+                            <span>Thu</span>
+                            <span>Fri</span>
+                            <span>Sat</span>
+
+                        </div>
+
+                        <div
+                            class="calendar-grid"
+                            id="calendarGrid">
+                        </div>
+
+                    </div>
+
+
+                    <div class="events-card">
+
+                        <div class="card-heading">
+                            <h2>Upcoming Events</h2>
+                        </div>
+
+                        <div id="eventsList"></div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- ================================================= -->
+            <!-- STREAK -->
+            <!-- ================================================= -->
+
+            <section class="page hidden" id="streakPage">
+
+                <div class="page-header">
+
+                    <div>
+                        <h1>Learning Streak 🔥</h1>
+
+                        <p>
+                            Keep learning every day.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="streak-hero">
+
+                    <div class="big-fire">
+                        🔥
+                    </div>
+
+                    <div>
+                        <h2>31 Days</h2>
+                        <p>Current Learning Streak</p>
+                    </div>
+
+                </div>
+
+
+                <div class="stats-grid">
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon orange">
+                            <i class="fa-solid fa-fire"></i>
+                        </div>
+
+                        <div>
+                            <h3>31</h3>
+                            <p>Current Streak</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon purple">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+
+                        <div>
+                            <h3>45</h3>
+                            <p>Longest Streak</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat-card">
+
+                        <div class="stat-icon green">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+
+                        <div>
+                            <h3>142</h3>
+                            <p>Learning Days</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-card">
+
+                    <h2>Weekly Activity</h2>
+
+                    <div class="weekly-streak">
+
+                        <div>
+                            <span>Mon</span>
+                            <b class="day-complete">✓</b>
+                        </div>
+
+                        <div>
+                            <span>Tue</span>
+                            <b class="day-complete">✓</b>
+                        </div>
+
+                        <div>
+                            <span>Wed</span>
+                            <b class="day-complete">✓</b>
+                        </div>
+
+                        <div>
+                            <span>Thu</span>
+                            <b class="day-complete">✓</b>
+                        </div>
+
+                        <div>
+                            <span>Fri</span>
+                            <b class="day-empty">○</b>
+                        </div>
+
+                        <div>
+                            <span>Sat</span>
+                            <b class="day-empty">○</b>
+                        </div>
+
+                        <div>
+                            <span>Sun</span>
+                            <b class="day-empty">○</b>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <section class="page hidden" id="messagesPage">
+
+                <div class="page-header">
+
+                    <div>
+                        <h1>Messages</h1>
+
+                        <p>
+                            Connect with your study group members.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="messages-container">
+
+                    <div class="contacts">
+
+                        <div class="contact-title">
+                            <h2>Chats</h2>
+                        </div>
+
+
+                        <div
+                            class="contact active-contact"
+                            onclick="selectChat('Rahul')">
+
+                            <div class="avatar">
+                                R
+                            </div>
+
+                            <div>
+                                <h3>Rahul</h3>
+                                <p>Are you joining?</p>
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="contact"
+                            onclick="selectChat('Priya')">
+
+                            <div class="avatar">
+                                P
+                            </div>
+
+                            <div>
+                                <h3>Priya</h3>
+                                <p>See you tomorrow!</p>
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="contact"
+                            onclick="selectChat('Arjun')">
+
+                            <div class="avatar">
+                                A
+                            </div>
+
+                            <div>
+                                <h3>Arjun</h3>
+                                <p>Check the notes.</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="chat-area">
+
+                        <div class="chat-header">
+
+                            <div class="avatar">
+                                R
+                            </div>
+
+                            <div>
+                                <h3 id="chatName">
+                                    Rahul
+                                </h3>
+
+                                <span class="online">
+                                    ● Online
+                                </span>
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="chat-messages"
+                            id="chatMessages">
+
+                            <div class="message received">
+                                Hi! Are you joining the Python study group?
+                            </div>
+
+                            <div class="message sent">
+                                Yes! I'll join today.
+                            </div>
+
+                        </div>
+
+
+                        <div class="message-input">
+
+                            <input
+                                type="text"
+                                id="messageInput"
+                                placeholder="Type a message..."
+                            >
+
+                            <button onclick="sendMessage()">
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <section class="page hidden" id="settingsPage">
+
+                <div class="page-header">
+
+                    <div>
+                        <h1>Settings</h1>
+
+                        <p>
+                            Manage your CampusVerse account.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div class="settings-container">
+
+
+                    <!-- Profile -->
+
+                    <div class="settings-card">
+
+                        <h2>
+                            <i class="fa-solid fa-user"></i>
+                            Profile
+                        </h2>
+
+                        <div class="form-group">
+
+                            <label>Full Name</label>
+
+                            <input
+                                type="text"
+                                id="userName"
+                                value="Himasree"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>Email</label>
+
+                            <input
+                                type="email"
+                                id="userEmail"
+                                value="student@example.com"
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>College</label>
+
+                            <input
+                                type="text"
+                                id="userCollege"
+                                value="Vemu Institute of Technology"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- Notifications -->
+
+                    <div class="settings-card">
+
+                        <h2>
+                            <i class="fa-solid fa-bell"></i>
+                            Notifications
+                        </h2>
+
+
+                        <label class="setting-option">
+
+                            <div>
+                                <strong>Study Reminders</strong>
+                                <p>Receive reminders for learning.</p>
+                            </div>
+
+                            <input
+                                type="checkbox"
+                                id="studyReminder"
+                                checked
+                            >
+
+                        </label>
+
+
+                        <label class="setting-option">
+
+                            <div>
+                                <strong>Group Notifications</strong>
+                                <p>Get notifications from study groups.</p>
+                            </div>
+
+                            <input
+                                type="checkbox"
+                                id="groupNotification"
+                                checked
+                            >
+
+                        </label>
+
+
+                        <label class="setting-option">
+
+                            <div>
+                                <strong>Email Notifications</strong>
+                                <p>Receive updates by email.</p>
+                            </div>
+
+                            <input
+                                type="checkbox"
+                                id="emailNotification"
+                            >
+
+                        </label>
+
+                    </div>
+
+
+
+                    <!-- Appearance -->
+
+                    <div class="settings-card">
+
+                        <h2>
+                            <i class="fa-solid fa-palette"></i>
+                            Appearance
+                        </h2>
+
+
+                        <label class="setting-option">
+
+                            <div>
+                                <strong>Dark Mode</strong>
+                                <p>Use dark mode throughout CampusVerse.</p>
+                            </div>
+
+                            <input
+                                type="checkbox"
+                                id="darkMode"
+                                onchange="toggleDarkMode()"
+                            >
+
+                        </label>
+
+                    </div>
+
+
+
+                    <!-- Security -->
+
+                    <div class="settings-card">
+
+                        <h2>
+                            <i class="fa-solid fa-lock"></i>
+                            Security
+                        </h2>
+
+
+                        <div class="form-group">
+
+                            <label>New Password</label>
+
+                            <input
+                                type="password"
+                                id="newPassword"
+                                placeholder="Enter new password"
+                            >
+
+                        </div>
+
+
+                        <button
+                            class="primary-button"
+                            onclick="saveSettings()">
+
+                            Save Changes
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+<div class="modal" id="groupModal">
+
+    <div class="modal-content">
+
+        <button class="close-button"
+                onclick="closeCreateGroup()">
+            ×
+        </button>
+
+        <h2>Create Study Group</h2>
+
+        <p>
+            Create a group and start learning together.
+        </p>
+
+
+        <div class="form-group">
+
+            <label>Group Name</label>
+
+            <input
+                type="text"
+                id="newGroupName"
+                placeholder="Example: C Programming"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Description</label>
+
+            <input
+                type="text"
+                id="newGroupDescription"
+                placeholder="Example: C programming basics"
+            >
+
+        </div>
+
+
+        <button
+            class="primary-button full-button"
+            onclick="createGroup()">
+
+            Create Group
+
+        </button>
+
+    </div>
+
+</div>
+
+<div class="modal" id="eventModal">
+
+    <div class="modal-content">
+
+        <button class="close-button"
+                onclick="closeEventModal()">
+            ×
+        </button>
+
+        <h2>Add Calendar Event</h2>
+
+        <p>
+            Add a class, meeting or study session.
+        </p>
+
+
+        <div class="form-group">
+
+            <label>Event Title</label>
+
+            <input
+                type="text"
+                id="eventTitle"
+                placeholder="Example: Python Study"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Date</label>
+
+            <input
+                type="date"
+                id="eventDate"
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>Time</label>
+
+            <input
+                type="time"
+                id="eventTime"
+            >
+
+        </div>
+
+
+        <button
+            class="primary-button full-button"
+            onclick="addEvent()">
+
+            Add Event
+
+        </button>
+
+    </div>
+
+</div>
+<script src="study.js"></script>
+
+</body>
+</html>

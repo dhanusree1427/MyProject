@@ -1,0 +1,1 @@
+console.log("JAva Script file linked successfully!");
